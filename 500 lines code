@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asha Foundation | Empowering India's Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .donation-input::-webkit-outer-spin-button,
+        .donation-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .project-overlay {
+            opacity: 0;
+            transition: all 0.3s ease;
+       }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-orange-600">HandsForHumanity</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-orange-600">Home</a>
+                    <a href="#mission" class="text-gray-700 hover:text-orange-600">Our Mission</a>
+                    <a href="#projects" class="text-gray-700 hover:text-orange-600">Projects</a>
+                    <a href="#impact" class="text-gray-700 hover:text-orange-600">Impact Stories</a>
+                    <a href="#donate" class="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition duration-300">Donate Now</a>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-600">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-orange-50">Home</a>
+            <a href="#mission" class="block px-4 py-2 text-gray-700 hover:bg-orange-50">Our Mission</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-orange-50">Projects</a>
+            <a href="#impact" class="block px-4 py-2 text-gray-700 hover:bg-orange-50">Impact Stories</a>
+            <a href="#donate" class="block px-4 py-2 text-orange-600 font-semibold">Donate Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 bg-gradient-to-b from-orange-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">Building a Stronger India Together</h1>
+                <p class="text-xl text-gray-600 mb-8">Transforming lives across rural India through education, healthcare, and sustainable development.</p>
+                <div class="flex justify-center gap-4">
+                    <a href="#donate" class="bg-orange-600 text-white px-8 py-3 rounded-full text-lg hover:bg-orange-700 transition duration-300">Make a Donation</a>
+                    <a href="#projects" class="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-full text-lg hover:bg-orange-50 transition duration-300">Our Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Counter Section -->
+    <section class="py-12 bg-orange-600">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">50,000+</div>
+                    <div>Lives Impacted</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">200+</div>
+                    <div>Villages Reached</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">100+</div>
+                    <div>Schools Built</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">25+</div>
+                    <div>Healthcare Centers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Mission</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition duration-300">
+                    <i class="bi bi-book-fill text-4xl text-orange-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Quality Education</h3>
+                    <p class="text-gray-600">Providing quality education to rural children and empowering them with digital literacy.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition duration-300">
+                    <i class="bi bi-heart-pulse-fill text-4xl text-orange-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Healthcare Access</h3>
+                    <p class="text-gray-600">Making healthcare accessible to remote villages through mobile clinics and telemedicine.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition duration-300">
+                    <i class="bi bi-women text-4xl text-orange-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Women Empowerment</h3>
+                    <p class="text-gray-600">Supporting women through skill development and microfinance initiatives.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition duration-300">
+                    <i class="bi bi-tree-fill text-4xl text-orange-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Rural Development</h3>
+                    <p class="text-gray-600">Creating sustainable infrastructure and promoting organic farming practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative rounded-lg overflow-hidden shadow-lg project-card">
+                    <img  src="https://media.licdn.com/dms/image/v2/C561BAQHKqdYv2laI1A/company-background_10000/company-background_10000/0/1590131645094/vidya_integrated_development_for_youth_and_adults_cover?e=2147483647&v=beta&t=_PDgm6V6iQsVz4jtJk2OgBm2wxwFpZ2rp0WZKVQWe3U" alt="Rural Education" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent project-overlay flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold mb-2">Vidya Project</h3>
+                            <p class="mb-4">Bringing quality education to rural children across Maharashtra.</p>
+                            <a href="#" class="text-orange-400 hover:text-orange-300">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden shadow-lg project-card">
+                    <img src="https://etimg.etb2bimg.com/thumb/msid-71463252,imgsize-12035,width-1200,height=765,overlay-ethealth/industry/usaid-recognises-indian-ngo-for-making-healthcare-accessible-affordable.jpg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent project-overlay flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold mb-2">Swasthya Initiative</h3>
+                            <p class="mb-4">Mobile medical camps serving remote villages in Rajasthan.</p>
+                            <a href="#" class="text-orange-400 hover:text-orange-300">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden shadow-lg project-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV0HIulTN5zm8pBzi_JgjQ-ueOP_UEvmVfkg&s" alt="Women Empowerment" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent project-overlay flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-xl font-semibold mb-2">Shakti Program</h3>
+                            <p class="mb-4">Empowering rural women through skill development.</p>
+                            <a href="#" class="text-orange-400 hover:text-orange-300">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stories -->
+    <section id="impact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Impact Stories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="mb-4">
+                        <i class="bi bi-quote text-4xl text-orange-600"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Thanks to HandsForHumanity Foundation's support, our village now has its first digital classroom. Our children are learning computers and connecting with the world."</p>
+                    <p class="font-semibold">- Rajesh Kumar, Village Sarpanch, Bihar</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="mb-4">
+                        <i class="bi bi-quote text-4xl text-orange-600"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The mobile medical camp saved my mother's life. We no longer have to travel 50 kilometers for basic healthcare."</p>
+                    <p class="font-semibold">- Priya Singh, Beneficiary, Rajasthan</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="mb-4">
+                        <i class="bi bi-quote text-4xl text-orange-600"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Through the Shakti Program, I learned tailoring and now run my own small business. I can support my children's education."</p>
+                    <p class="font-semibold">- Lakshmi Devi, Entrepreneur, Karnataka</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="py-20 bg-orange-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Support Our Cause</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Select Amount</h3>
+                    <div class="grid grid-cols-3 gap-4 mb-4">
+                        <button onclick="setAmount(500)" class="amount-btn p-3 border rounded-lg hover:bg-orange-50">₹500</button>
+                        <button onclick="setAmount(1000)" class="amount-btn p-3 border rounded-lg hover:bg-orange-50">₹1,000</button>
+                        <button onclick="setAmount(5000)" class="amount-btn p-3 border rounded-lg hover:bg-orange-50">₹5,000</button>
+                    </div>
+                    <input type="number" id="custom-amount" placeholder="Custom Amount (₹)" class="donation-input w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600">
+                    <p class="text-sm text-gray-500 mt-2">All donations are eligible for tax benefits under 80G</p>
+                </div>
+                <button onclick="processDonation()" class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition duration-300">Donate Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HandsForHumanity Foundation</h3>
+                    <p class="text-gray-400">Transforming rural India through hope, education, and empowerment.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#mission" class="text-gray-400 hover:text-white">Our Mission</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
+                        <li><a href="#impact" class="text-gray-400 hover:text-white">Impact Stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400"><i class="bi bi-envelope-fill mr-2"></i>connect@HandsForHumanityfoundation.org</li>
+                        <li class="text-gray-400"><i class="bi bi-telephone-fill mr-2"></i>+91 8885220849</li>
+                        <li class="text-gray-400"><i class="bi bi-geo-alt-fill mr-2"></i>23 Hope Street, bengluru, India</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400 text-sm">Registered under Societies Registration Act XXI of 1860</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2023 HandsForHumanity Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        let selectedAmount = 0;
+
+        function setAmount(amount) {
+            selectedAmount = amount;
+            document.getElementById('custom-amount').value = amount;
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('bg-orange-50');
+            });
+            event.target.classList.add('bg-orange-50');
+        }
+
+        function processDonation() {
+            const amount = document.getElementById('custom-amount').value;
+            if (!amount || amount <= 0) {
+                alert('Please enter a valid donation amount');
+                return;
+            }
+            alert(Thank you for your generous donation of ₹${amount}! Together we can make a difference.);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VyomaNest - Your Perfect Property Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .property-card:hover {ssd
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+        .map-container {
+            height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">VyomaNest</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-600">Home</a>
+                    <a href="#properties" class="hover:text-blue-600">Properties</a>
+                    <a href="#contact" class="hover:text-blue-600">Contact</a>
+                    <a href="#about" class="hover:text-blue-600">About</a>
+                </div>
+                <button class="md:hidden"><i class="bi bi-list text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center" data-aos="fade-up">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Hero" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        <div class="relative text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Find Your Dream Home</h1>
+            <p class="text-xl mb-8">"Your dream home awaits, let us guide you home."</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg max-w-4xl mx-auto">
+                <div id="filterContainer" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <select id="locationFilter" class="p-2 border rounded text-gray-700">
+                        <option value="">Locations</option>
+                        <option>Banashakari</option>
+                        <option>Whitefield</option>
+                        <option>Silk Institute</option>
+                        <option>UB City</option>
+                    </select>
+                    <select id="propertyTypeFilter" class="p-2 border rounded text-gray-700">
+                        <option value="">Property Type</option>
+                        <option>Apartment</option>
+                        <option>Villa</option>
+                        <option>Plot</option>
+                        <option>Flat</option>
+                    </select>
+                    <select id="budgetFilter" class="p-2 border rounded text-gray-700">
+                        <option value="">Budget</option>
+                        <option>₹20-40 Lakhs</option>
+                        <option>₹40-60 Lakhs</option>
+                        <option>₹60-80 Lakhs</option>
+                        <option>₹80+ Lakhs</option>
+                    </select>
+                    <button id="searchButton" class="bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Properties -->
+    <section id="properties" class="py-16 bg-gray-50" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Properties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Property Cards -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Property" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Luxury Villa in UB city</h3>
+                        <p class="text-gray-600 mb-4">Bangalore, Karnataka</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blue-600 font-bold">₹8-15Cr</span>
+                            <span class="text-gray-500">7BHK</span>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                </div>
+                <!-- Add more property cards with different images and details -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://blog.gaaptuff.com/wp-content/uploads/2024/03/types-of-glasses-in-residential-applications.jpg" alt="Property" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Luxury Flats in Whitefield</h3>
+                        <p class="text-gray-600 mb-4">Bangalore, Karnataka</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blue-600 font-bold">₹1.2-4Cr</span>
+                            <span class="text-gray-500">3BHK</span>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                </div>
+                <!-- Add more property cards with different images and details -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://www.acegroupsindia.com/project_pics/ace-plots-99391.jpg" alt="Property" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2"> Plots in Banashakari</h3>
+                        <p class="text-gray-600 mb-4">Bangalore, Karnataka</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blue-600 font-bold">₹50L-1.2Cr</span>
+                            <span class="text-gray-500">30x40,40x60</span>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                </div> 
+                <!-- Add more property cards with different images and details -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353277471/XW/SX/JQ/144313312/land-sale-500x500.jpg" alt="Property" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2"> Plots in Silk institute</h3>
+                        <p class="text-gray-600 mb-4">Bangalore, Karnataka</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blue-600 font-bold">₹50L-3Cr</span>
+                            <span class="text-gray-500">30x40,40x60,50x60</span>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <!-- Amenities -->
+    <section class="py-16 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Facilities We Provide</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <i class="bi bi-shield-check text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold">24/7 Security</h3>
+                </div>
+                <div class="p-4">
+                    <i class="bi bi-water text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold">Swimming Pool</h3>
+                </div>
+                <div class="p-4">
+                    <i class="bi bi-tree text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold">Garden Area</h3>
+                </div>
+                <div class="p-4">
+                    <i class="bi bi-car-front text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold">Parking Space</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form -->
+    <section id="contact" class="py-16 bg-gray-50" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label class="block mb-2">Name</label>
+                        <input type="text" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Email</label>
+                        <input type="email" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Phone</label>
+                        <input type="tel" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Message</label>
+                        <textarea class="w-full p-2 border rounded h-32" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Map -->
+    <section class="py-16" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Location</h2>
+            <div class="map-container rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.49085419921876!3d12.954517000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1677830764041!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">VyomaNest</h3>
+                    <p class="text-gray-400">Your trusted partner in finding the perfect home.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#" class="hover:text-white">Properties</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="bi bi-geo-alt"></i> Bangalore, Karnataka</li>
+                        <li><i class="bi bi-telephone"></i> +91 9353377505</li>
+                        <li><i class="bi bi-envelope"></i> info@VyomaNest.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-blue-500"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-400"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-pink-500"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-700"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 VyomaNest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function() {
+        const location = document.getElementById('locationFilter').value;
+        const propertyType = document.getElementById('propertyTypeFilter').value;
+        const budget = document.getElementById('budgetFilter').value;
+        console.log('Search Filters:', {
+            location,
+            propertyType,
+            budget
+        });
+        // Placeholder for actual filter logic (e.g., API call)
+        alert(`Searching for ${propertyType} in ${location} within ${budget} budget.`);
+    });
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const menu = document.querySelector('.md\\:flex');
+            menu.classList.toggle('hidden');
+        });
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
